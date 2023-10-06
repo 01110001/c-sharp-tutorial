@@ -1,0 +1,42 @@
+
+METHOD ARE FUNCTION INSIDE A CLASS.
+
+
+// static: is callable on a class even when no instance of the class has been created
+public static void MyMethod()
+  
+// virtual: can be called or overridden in an inherited class
+public virtual void MyMethod()
+  
+// internal: access is limited within the current assembly
+internal void MyMethod()
+  
+//private: access is limited only within the same class
+private void MyMethod()
+  
+//public: access right from every class / assembly
+public void MyMethod()
+  
+//protected: access is limited to the containing class or types derived from it
+protected void MyMethod()
+  
+//protected internal: access is limited to the current assembly or types derived from the containing class.
+protected internal void MyMethod()
+
+// A METHOD CALCULTING THE SUM OF TWO NUMBER.
+using System;
+
+class MethodExample
+{
+    public static int Sum(int a, int b) //method initialization
+    {
+        return a + b; //returning sum of a and b
+    }
+
+    static void Main()
+    {
+      int answer;
+      answer = Sum(5,6); //calling method by passing appropriate arguments
+      Console.WriteLine("answer is: {0}", answer);
+    }
+}
