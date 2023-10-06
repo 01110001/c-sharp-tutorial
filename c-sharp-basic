@@ -1,0 +1,215 @@
+// See https://aka.ms/new-console-template for more information
+using System; //using System means that we can use classes from the System namespace.
+
+namespace HelloWorld //organize code
+{
+    class Program // everycode that run must be inside a class
+    {
+        //Creating method
+        static void MyMethod()
+        {
+            Console.WriteLine("I just got executed!");
+        }
+        // Outputs "I just got executed!"
+        //when creating method inside a class make sure it is public void and not static.
+        class Car
+        {
+            string color;                 // field
+            int maxSpeed;                 // field
+            public void fullThrottle()    // method
+            {
+                Console.WriteLine("The car is going as fast as it can!");
+            }
+
+            static void Main(string[] args)
+            {
+                Car myObj = new Car();
+                myObj.fullThrottle();  // Call the method
+            }
+        }
+
+
+        static void Main(string[] args) //any code in the main bracket is executed
+        {
+            MyMethod() //output
+            //equivalent of print() in python
+            Console.WriteLine("Hello World!"); //console is a class of system namespace
+            
+            //writeline write on a new line each time its call
+            //write() does not insert a new line
+
+            //assign a value to a variable
+            string name = "value";
+            //you can also assign a variable with no value
+            string noName;
+            // constant canno change value
+            const int number = 10;
+            //multiple variable creation in one line
+            int x = 5, y = 6, z = 50;
+            //float take less memory than double
+
+            //convert int to double
+            double myDouble = 9.78;
+            int myInt = (int)myDouble;    // Manual casting: double to int
+            //Or use built in method Convert.ToString or ToDouble
+
+            //Read input with Console.ReadLine() input in C# are always string
+
+            //++ = increment -- = decrement
+
+            //operator
+            // !=, && and, || or , ! = not
+
+            //The math operation
+            Console.WriteLine(Math.Min(5, 10)); // will find the min number between the two
+            //other are max Sqrt,round,abs etcc...
+
+            //get the lenght of a string with the .length method
+            string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            Console.WriteLine("The length of the txt string is: " + txt.Length);
+
+            //also there is the toUpper() and toLower() method
+
+            //f string equivalent of python is $ dollar sign
+            string firstName = "John";
+            string lastName = "Doe";
+            Console.WriteLine($"My full name is: {firstName} {lastName}");
+
+            //get the first character of a string
+            string myString = "Hello";
+            Console.WriteLine(myString[0]);  // Outputs "H"
+
+            //get the index of a string
+            string myString = "Hello";
+            Console.WriteLine(myString.IndexOf("e"));  // Outputs "1"
+
+            //substring
+            // Full name
+            string name = "John Doe";
+
+            // Location of the letter D
+            int charPos = name.IndexOf("D");
+
+            // Get last name
+            string lastName = name.Substring(charPos);
+
+            // Print the result
+            Console.WriteLine(lastName); // the ouput will be Doe
+
+
+            // \t = insert new tab \b = insert backspace \n = insert new line
+            //The sequence \"  inserts a double quote in a string:
+            //The sequence \'  inserts a single quote in a string:
+            //The sequence \\  inserts a single backslash in a string:
+
+
+            // if and else, else if, switch
+            int myAge = 25;
+            int votingAge = 18;
+
+            if (myAge >= votingAge)
+            {
+                Console.WriteLine("Old enough to vote!");
+            }
+            else
+            {
+                Console.WriteLine("Not old enough to vote.");
+            }
+
+            //simpler version of if else statement || (condition) ? true : false;
+            //there is also the break; keyword like in python, don't forget the semi-colon
+            //there is also the default: print something as default
+            int time = 20;
+            string result = (time < 18) ? "Good day." : "Good evening.";
+            Console.WriteLine(result);
+
+            //while condition
+            int i = 0;
+            while (i < 5)
+            {
+                Console.WriteLine(i);
+                i++;
+            }
+
+            //this while loop execute the do once then the while loop, if condition is met
+            do
+            {
+                // code block to be executed
+            }
+            while (condition);
+            { }
+
+            //for loop
+            // for(,condition,)
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            //loop through an array exclusively
+            foreach (type variableName in arrayName)
+            {
+                // code block to be executed
+            }
+            //another exemple
+            string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
+            foreach (string i in cars)
+            {
+                Console.WriteLine(i);
+            }
+
+            //create array of string
+            string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
+            //create array of int
+            int[] myNum = { 10, 20, 30, 40 };
+
+            //access an element of an array
+            string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
+            Console.WriteLine(cars[0]);
+            // Outputs Volvo
+
+            //get the length of an array
+            Console.WriteLine(cars.Length);
+
+            //using for each
+            string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
+            foreach (string i in cars)
+            {
+                Console.WriteLine(i);
+            }
+
+            //sort an array
+            Array.Sort(cars);
+
+            //other method are .sum() .max() .min()
+
+            //Two-Dimensional Arrays
+            int[,] numbers = { { 1, 4, 2 }, { 3, 6, 8 } };
+
+            // The single comma [,] specifies that the array is two-dimensional. A three-dimensional array would have two commas: int[,,].
+
+            //access element of a 2ds array
+            int[,] numbers = { { 1, 4, 2 }, { 3, 6, 8 } };
+            Console.WriteLine(numbers[0, 2]);  // Outputs 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+    }
+}
